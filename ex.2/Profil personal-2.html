@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> PROFILUL MEU</title>
+<style>
+title {font-size:50px; color: solid black;}
+
+body {background-color:#66ccff;}
+
+h1 {color:solid black;font-size: 40px;text-align:center; font-family:"Verdana"; underline: 3px solid black;}
+
+p {color:#003366;font-size: 30 px; font-style: italic; text-align:center;}
+
+table {background-color:lightblue;table-align:center;}
+table,tr,td.center {border: 2px black;margin-left: auto; 
+  margin-right: auto;}
+tr:hover {background-color: #ffffff; border:10px solid black;}
+table.center{margin-left: auto; 
+  margin-right: auto;}
+img{height:150px; width:200px; border:2px solid black;  border-radius:12px; display:block; padding:15px; margin:right; opacity:0.50;  margin-left: auto;
+  margin-right: auto;}
+</style>
+
+
+<script>
+function veziViitor()
+{
+  document.getElementById("numeProfil").innerHTML="Inginer electronist Babiciu Sebastian";
+  
+  var tabelEducatie=document.getElementById("tabEducatie");
+  tabelEducatie.rows[0].cells[0].innerHTML="AN";
+  tabelEducatie.rows[0].cells[1].innerHTML="facultate";
+  tabelEducatie.rows[0].cells[2].innerHTML="profesional";
+    tabelEducatie.rows[1].cells[1].innerHTML="sunt un student de top";
+  tabelEducatie.rows[1].cells[0].innerHTML="2023";
+  tabelEducatie.rows[1].cells[2].innerHTML="lucrez intr-o companie mare";
+  tabelEducatie.rows[2].cells[0].innerHTML="2024";
+    tabelEducatie.rows[3].cells[0].innerHTML="2026";
+	  tabelEducatie.rows[3].cells[2].innerHTML="imi incep propria afacere";
+  tabelEducatie.rows[2].cells[1].innerHTML="termin licenta la ETTI";
+  tabelEducatie.rows[2].cells[2].innerHTML="avansez in acea companie";
+    tabelEducatie.rows[3].cells[1].innerHTML="termin masteratul la ETTI";
+  document.getElementById("pozaProfil").src="image1.jpeg";
+  document.body.style.backgroundColor="lightblue";
+  var par=document.getElementById("p");
+  var i;
+  for(i=0; i<par.length;i++){
+  par[i].style.color="yellow"; }
+  document.getElementById("pozaProfil").style.opacity="0.9";
+  document.getElementById("pozaProfil").style.border="3px"; }
+  
+  function Varsta (){
+  var azi=new Date;
+  var varstMea;
+  var anNastere=document.getElementById("varsta").innerHTML;
+  varstMea=azi.getFullYear()-parseInt(anNastere);
+  
+  document.getElementById("varsta").innerHTML=varstMea;
+  }
+</script>
+</head>
+<body>
+<div>
+<img id="pozaProfil" src="Babiciu poza.jpg" class="center">
+<h1 id="numeProfil" > DESCRIERE PERSONALA</h1>
+<p> NUME: BABICIU</p>
+<p> PRENUME: SEBASTIAN-ADRIAN</P>
+<P> E-MAIL: babiciusebastian@yahoo.com </p>
+<p onmouseover="Varsta ()" id="varsta">2001</p>
+<p> CITAT REPREZENTATIV:"DEVII CEEA CE INVETI."</p>
+<p> LISTA DISCIPLINE APROFUNDARE</p>
+<button onclick="veziViitor()">Alta viata</button>
+<table id="tabEducatie" class="center">
+<tr>
+<th>DISCIPLINE:</TH>
+<th>AN DE STUDIU:</th>
+<th>LINK: </th>
+</tr>
+<tr>
+<td> CCEP </td>
+<td> ANUL I</TD> 
+<td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/05.pdf">link 1</a></td>
+</tr>
+<tr>
+<td> MATEMATICI SPECIALE </td>
+<td> ANUL I </td>
+<td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/08.pdf"> link 2</a></td>
+</tr>
+<tr>
+<td> DISPOZITIVE ELECTRONICE </TD>
+<td> ANUL I</td>
+<td><a href="https://etti.utcluj.ro/files/FiseDisciplina/EaRo/12.pdf">link 3</a></td>
+</tr>
+</table>
+<p>HOBBY:CITIT, INOT, FITNESS</p>
+</div>
+</body>
+</html>
